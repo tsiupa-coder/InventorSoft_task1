@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class Transfer {
 
-    public static int[] read() {
-        // input and split to String array
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
+    public static int[] read(String line) {
+        // split to String array
+        String str = line;
         str = str.trim().replaceAll(" +", " ");
         String[] splited = str.split(" ");
 

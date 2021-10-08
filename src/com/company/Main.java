@@ -1,17 +1,22 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        for (int i:
-                Transfer.ArrayChange(Transfer.read())) {
 
-            System.out.print(" " + i );
+        Scanner scanner = new Scanner(System.in);
+
+        String line = scanner.nextLine();
+
+        int[] arr = Transfer.ArrayChange(Transfer.read(line));
+
+        for ( int i :arr) {
+            System.out.print(i + " ");
 
         }
 
-
-
-    }
+        }
 }
