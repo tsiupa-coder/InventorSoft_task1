@@ -11,12 +11,7 @@ public class Main {
 
         String line = scanner.nextLine();
 
-        int[] arr = Transfer.ArrayChange(Transfer.read(line));
-
-        for ( int i :arr) {
-            System.out.print(i + " ");
-
-        }
+        System.out.println(Transfer.ArrayChange(Transfer.read(line)));
 
         }
 }
