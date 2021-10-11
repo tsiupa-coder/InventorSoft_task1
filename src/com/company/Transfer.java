@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Transfer {
@@ -24,7 +25,7 @@ public class Transfer {
     }
 
 
-    public static int[] ArrayChange(int[] arr ){
+    public static String ArrayChange(int[] arr ){
 
 
         int[] temp = new int[arr.length];
@@ -39,7 +40,7 @@ public class Transfer {
             t++;
         }
 
-        return temp;
+        return toString(temp);
     }
 
     public static boolean isNumeric(String strNum) {
@@ -47,11 +48,21 @@ public class Transfer {
             return false;
         }
         try {
-            int i = Integer.parseInt(strNum);
+            Integer.parseInt(strNum);
         } catch (NumberFormatException e) {
             return false;
         }
         return true;
+    }
+
+    private static String toString(int[] arr){
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for ( int i : arr ) {
+            stringBuilder.append(i);
+        }
+
+        return stringBuilder.toString();
     }
 
 
